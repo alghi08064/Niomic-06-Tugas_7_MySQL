@@ -1,0 +1,20 @@
+MariaDB [tugas_7]> create table info_kota (
+    -> Nama_Kota varchar(50) not null,
+    -> Kecamatan smallint unsigned,
+    -> Kelurahan mediumint unsigned,
+    -> Luas_Wilayah_km2 decimal(10,2) unsigned,
+    -> Jumlah_Penduduk int
+    -> );
+Query OK, 0 rows affected (0.035 sec)
+
+MariaDB [tugas_7]> desc info_kota;
++------------------+------------------------+------+-----+---------+-------+
+| Field            | Type                   | Null | Key | Default | Extra |
++------------------+------------------------+------+-----+---------+-------+
+| Nama_Kota        | varchar(50)            | NO   |     | NULL    |       |
+| Kecamatan        | smallint(5) unsigned   | YES  |     | NULL    |       |
+| Kelurahan        | mediumint(8) unsigned  | YES  |     | NULL    |       |
+| Luas_Wilayah_km2 | decimal(10,2) unsigned | YES  |     | NULL    |       |
+| Jumlah_Penduduk  | int(11)                | YES  |     | NULL    |       |
++------------------+------------------------+------+-----+---------+-------+
+5 rows in set (0.008 sec)

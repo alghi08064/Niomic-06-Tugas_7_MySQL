@@ -1,0 +1,33 @@
+MariaDB [tugas_7]> create table info_kota_2 like info_kota;
+Query OK, 0 rows affected (0.029 sec)
+
+MariaDB [tugas_7]> desc info_kota_2;
++------------------+------------------------+------+-----+---------+-------+
+| Field            | Type                   | Null | Key | Default | Extra |
++------------------+------------------------+------+-----+---------+-------+
+| Nama_Kota        | varchar(50)            | NO   |     | NULL    |       |
+| Kecamatan        | smallint(5) unsigned   | YES  |     | NULL    |       |
+| Kelurahan        | mediumint(8) unsigned  | YES  |     | NULL    |       |
+| Luas_Wilayah_km2 | decimal(10,2) unsigned | YES  |     | NULL    |       |
+| Jumlah_Penduduk  | int(11)                | YES  |     | NULL    |       |
++------------------+------------------------+------+-----+---------+-------+
+5 rows in set (0.008 sec)
+
+MariaDB [tugas_7]> select * from info_kota_2;
+Empty set (0.000 sec)
+
+MariaDB [tugas_7]> alter table info_kota_2
+    -> drop column Kecamatan,
+    -> drop column Kelurahan,
+    -> drop column Luas_Wilayah_km2;
+Query OK, 0 rows affected (0.019 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [tugas_7]> desc info_kota_2;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| Nama_Kota       | varchar(50) | NO   |     | NULL    |       |
+| Jumlah_Penduduk | int(11)     | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+2 rows in set (0.007 sec)

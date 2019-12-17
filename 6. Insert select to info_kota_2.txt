@@ -1,0 +1,20 @@
+MariaDB [tugas_7]> insert into info_kota_2 (Nama_Kota, Jumlah_Penduduk) select Nama_Kota, Jumlah_Penduduk from info_kota;
+Query OK, 10 rows affected (0.014 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+MariaDB [tugas_7]> select * from info_kota_2;
++-----------+-----------------+
+| Nama_Kota | Jumlah_Penduduk |
++-----------+-----------------+
+| Jakarta   |         9988495 |
+| Surabaya  |         2805906 |
+| Medan     |         2465469 |
+| Bekasi    |         2381053 |
+| Bandung   |         2339463 |
+| Makassar  |         1651146 |
+| Depok     |         1631384 |
+| Semarang  |         1621384 |
+| Tangerang |         1566190 |
+| Palembang |         1558064 |
++-----------+-----------------+
+10 rows in set (0.001 sec)
